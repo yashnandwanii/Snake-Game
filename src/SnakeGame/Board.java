@@ -6,6 +6,10 @@ import java.awt.*;
 public class Board extends JPanel {
     private int dots;
     private Image apple, dot, head;
+    private final int allDots=2500;
+    private final int dotSize=25;
+    private final int x[]=new int[allDots];
+    private final int y[]=new int[allDots];
 
     Board(){
         setBackground(Color.BLACK);
@@ -27,7 +31,8 @@ public class Board extends JPanel {
         dots = 3;
 
         for(int i = 0; i<dots; i++){
-
+            y[i]=50;
+            x[i]=50-i*dotSize;
         }
     }
 }
